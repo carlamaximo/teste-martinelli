@@ -1,11 +1,10 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import '../style/cabeca.css';
-import { IProps } from '../interface/Props';
 import { rotationHeadAction, inclinationHeadAction } from '../actions/cabeca';
 import CarouselComponent from './CarouselComponent';
 
-const Cabeca:React.FC<IProps> = () => {
+const Cabeca:React.FC = () => {
   const dispatch = useDispatch();
 
   function rotacionar(value:string|any) {
@@ -18,13 +17,13 @@ const Cabeca:React.FC<IProps> = () => {
 
   return (
     <div className="div-principal-cabeca">
-    <h3 className="d-flex justify-content-center h3-cabeca p-1">Cabeça</h3>
+    <h3 className="d-flex justify-content-center h3-cabeca p-1" data-testid="cabeca">Cabeça</h3>
      <form action="" className="d-flex justify-content-center">
 
        <label htmlFor="rotação" className="form  mx-3 labelInclinacao">
-         <h4 className="d-flex justify-content-center my-1">Rotação</h4>
+        <h4 className="d-flex justify-content-center my-1" data-testid="rotacao">Rotação</h4>
          <div className="div-carousel-inclinacao mx-auto">
-        <CarouselComponent arrayProps={['Rotação - 90°', 'Rotação - 45°', 'Em Repouso', 'Rotação 45°', 'Rotação 90°']} functionProps={rotacionar}/>
+        <CarouselComponent arrayProps={['Rotação - 90°', 'Rotação - 45°', 'Em Repouso', 'Rotação 45°', 'Rotação 90°']} functionProps={rotacionar} />
         </div>
         {/* <select name="rotação" id="rotação" className="form-select form-select-md mb-1 my-2" onChange={rotacionar}>
           <option value="- 90°">Rotação - 90°</option>

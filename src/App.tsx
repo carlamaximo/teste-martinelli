@@ -1,6 +1,6 @@
 import React from 'react';
 import BracoEsquerdo from './components/BracoEsquerdo';
-import BracoDireito from './components/BraçoDireito';
+import BracoDireito from './components/BracoDireito';
 import Cabeca from './components/Cabeca';
 import EstadoAtual from './components/EstadoAtual';
 // import CarouselComponent from './components/CarouselComponent';

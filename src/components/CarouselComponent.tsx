@@ -1,22 +1,30 @@
 import React, { useState } from 'react';
 // import { connect } from 'react-redux';
 import Carousel from 'react-bootstrap/Carousel';
+import { useReadyStateEffect } from 'react-ready-state-effect';
 import '../style/carousel.css';
 
 const CarouselComponent:React.FC<any> = ({arrayProps, functionProps}:any) => {
 
   function ControlledCarousel() {
     const [index, setIndex] = useState(0);
+    const [pagina, setPagina] = useState(true);
+    const [emRepouso, setEmRePouso] = useState('Em Repouso');
   
     const handleSelect = (selectedIndex:number, e:any) => {
       setIndex(selectedIndex);
-      // console.log(selectedIndex);
-      // console.log(arrayProps);
-      // console.log(e.target);
-      // console.log(arrayProps[selectedIndex]);
+      setPagina(false);
+      const result = arrayProps.findIndex((e:string) => e === 'Em Repouso');
+      console.log(result);
+      console.log(arrayProps[result]);
+      setEmRePouso(arrayProps[result]);
       functionProps(arrayProps[selectedIndex]);
     };
 
+    useReadyStateEffect(() => {
+        console.log(`Document loading completed.`);
+      }, [], "complete"
+    );
 
     return (
       <Carousel
@@ -30,36 +38,13 @@ const CarouselComponent:React.FC<any> = ({arrayProps, functionProps}:any) => {
       >
         {arrayProps.map((item:string, e:any) => 
         <Carousel.Item key={e}>
-            <p className="text-dark pl-3 item-carousel">{item}</p>
+          <p className="text-dark pl-3 item-carousel">{pagina ? arrayProps.find((e:string) => e === 'Em Repouso') : item}</p>
         </Carousel.Item>)}
-
-        {/* <Carousel.Item>
-            <p className="text-dark pl-3 item-carousel">Pra Cima</p>
-        </Carousel.Item>
-
-        <Carousel.Item>
-            <p className="text-dark item-carousel">Em Repouso</p>
-        </Carousel.Item>
-
-        <Carousel.Item>
-            <p className="text-dark item-carousel">Pra Baixo</p>
-        </Carousel.Item> */}
       </Carousel>
     );
   }
   
   return(<ControlledCarousel />);
 }
-
-// const mapStateToProps = (state:any) => ({
-//   rotation: state.rotationHeadReducer.rotation,
-//   inclination: state.inclinationHeadReducer.inclination,
-//   cotoveloEsquerdo: state.cotoveloEsquerdoReducer.cotoveloEsquerdo,
-//   pulsoEsquerdo: state.pulsoEsquerdoReducer.pulsoEsquerdo,
-//   cotoveloDireito: state.cotoveloDireitoReducer.cotoveloDireito,
-//   pulsoDireito: state.pulsoDireitoReducer.pulsoDireito,
-// });
-
-// export default connect(mapStateToProps, null)(CarouselComponent);
 
 export default CarouselComponent;

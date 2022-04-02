@@ -1,8 +1,9 @@
 .div-principal {
   /* background-image: url('https://thumbs.dreamstime.com/z/mecanismos-e-m%C3%A1quinas-dos-rob%C3%B4s-do-cyberpunk-detalhes-spacecr-131050202.jpg'); */
   /* background-image: url('https://thumbs.dreamstime.com/z/detalhes-da-nave-espacial-131090580.jpg'); */
+  /* background-image: url('https://thumbs.dreamstime.com/b/ilustra%C3%A7%C3%A3o-d-de-intelig%C3%AAncia-artificial-rob%C3%B4-drone-internet-bot-no-ciberespa%C3%A7o-tecnologia-digital-e-redes-sem-fios-162140289.jpg'); */
   background-size: 100%;
-  background-position: bottom 60px;
+  /* background-position: bottom 60px; */
   border: 1px solid gray;
   width: 80%;
 }
