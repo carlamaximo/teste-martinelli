@@ -1,1 +1,0 @@
-export const headAction = (state:{}) => ({ type: 'HEAD_ACTION', state });

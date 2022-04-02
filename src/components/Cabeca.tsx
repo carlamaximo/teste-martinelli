@@ -2,40 +2,17 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import '../style/cabeca.css';
 import { IProps } from '../interface/Props';
+import { rotationHeadAction, inclinationHeadAction } from '../actions/cabeca';
 
 const Cabeca:React.FC<IProps> = () => {
   const dispatch = useDispatch();
 
   function rotacionar({ target: { value } }:string|any) {
-    dispatch({ type: 'HEAD_ROTATION_ACTION', rotation: value });
-
-    const valorAtual = value;
-    console.log(valorAtual);
-
-    let grauDeRotacao:number = 0;
-
-    switch(value) {
-      case 'Rotação - 90°':
-        grauDeRotacao = grauDeRotacao - 90;
-        break;
-      case 'Rotação - 45°':
-        grauDeRotacao = grauDeRotacao - 45;
-        break;
-      case 'Em Repouso':
-        grauDeRotacao = 0;
-        break;
-      case 'Rotação 45°':
-        grauDeRotacao = grauDeRotacao + 45;
-        break;
-      case 'Rotação 90°':
-        grauDeRotacao = grauDeRotacao + 90;
-        break;
-      }
-      console.log('grau', grauDeRotacao);
+    dispatch(rotationHeadAction(value));
   }
 
   function inclinar({ target: { value } }:string|any) {
-    dispatch({ type: 'HEAD_INCLINATION_ACTION', inclination: value });
+    dispatch(inclinationHeadAction(value));
   }
 
   return (

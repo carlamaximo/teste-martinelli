@@ -1,4 +1,6 @@
 .div-principal-estado {
+  /* background-image: url('https://static.vecteezy.com/ti/vetor-gratis/t2/1180514-azul-painel-de-controle-interface-hud-vetor.jpg');
+  background-size: 100%; */
   border: 1px solid gray;
   padding-bottom: 3%;
   width: 100%;
@@ -17,4 +19,5 @@
   padding: 4%;
   margin-top: -0.9%;
   margin-bottom: -3%;
+  /* color: wheat; */
 }

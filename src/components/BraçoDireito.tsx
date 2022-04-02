@@ -1,16 +1,24 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import '../style/bracos.css'
+import { useDispatch, useSelector } from 'react-redux';
+import { cotoveloDireitoAction, pulsoDireitoAction } from '../actions/bracoDireito';
+import '../style/bracos.css';
 
 const BracoDireito:React.FC = () => {
   const dispatch = useDispatch();
 
+  const selector = useSelector((state:any) => state.cotoveloDireitoReducer.cotoveloDireito === 'Fortemente Contraído');
+
   function moverCotovelo({ target: { value } }:string|any) {
-    dispatch({ type: 'COTOVELO_DIREITO_ACTION', cotovelo: value });
+    dispatch(cotoveloDireitoAction(value));
   }
 
   function moverPulso({ target: { value } }:string|any) {
-    dispatch({ type: 'PULSO_DIREITO_ACTION', pulso: value });
+    if (selector === false) {
+      (alert('O Pulso só pode ser movimentado caso o Cotovelo esteja Fortemente Contraído.'));
+      return;
+    }
+    
+    dispatch(pulsoDireitoAction(value));
   }
 
   return (
@@ -35,7 +43,7 @@ const BracoDireito:React.FC = () => {
 
         <select className="form-select form-select-md mb-1 my-2" onChange={moverPulso}>
           <option value="Rotação - 45°">Rotação - 45°</option>
-          <option selected value="RotaçãoEm Repouso - 45°">Em Repouso°</option>
+          <option selected value="Em Repouso">Em Repouso</option>
           <option value="Rotação 45°">Rotação 45°</option>
           <option value="Rotação 90°">Rotação 90°</option>
           <option value="Rotação 135°">Rotação 135°</option>

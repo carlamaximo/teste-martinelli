@@ -7,6 +7,10 @@ const EstadoAtual:React.FC<IProps> = ({
   rotation, inclination, cotoveloEsquerdo, pulsoEsquerdo, cotoveloDireito, pulsoDireito 
   }) => {
 
+    // function pulsoValidation() {
+      
+    // }
+
   return (
     <div className="mx-auto d-flex flex-column div-principal-estado">
     <h3 className="d-flex justify-content-center p-1 h3-estado">Estado Atual</h3>
