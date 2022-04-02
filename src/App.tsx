@@ -9,10 +9,10 @@ const App:React.FC = () => {
   return (
     <div className="div-principal d-flex flex-column mx-auto my-auto">
      <Cabeca />
-      <div className="d-flex flex-direction-row justify-content-center">
-        <BracoEsquerdo />
-        <BracoDireito />
-      </div>
+    <div className="d-flex flex-direction-row mx-center div-app-bracos justify-content-center">
+      <BracoEsquerdo />
+      <BracoDireito />
+    </div>
     <EstadoAtual />
     </div>
   );

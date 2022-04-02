@@ -1,17 +1,20 @@
-.div-principal-bracos {
+.div-principal-estado {
   border: 1px solid gray;
   padding-bottom: 3%;
   width: 100%;
 }
 
-.h3-braco {
+.h3-estado {
   width: 100%;
   border: 1px solid gray;
   background-color: aliceblue;
   border-radius: 5px;
 }
 
-.div-app-bracos {
+.div-estado-item {
   border: 1px solid gray;
   width: 100%;
+  padding: 4%;
+  margin-top: -0.9%;
+  margin-bottom: -3%;
 }

@@ -40,7 +40,7 @@ const Cabeca:React.FC<IProps> = () => {
 
   return (
     <div className="div-principal-cabeca">
-    <h3 className="d-flex justify-content-center my-1 h3-cabeca p-1">Cabeça</h3>
+    <h3 className="d-flex justify-content-center h3-cabeca p-1">Cabeça</h3>
      <form action="" className="d-flex justify-content-center">
 
        <label htmlFor="rotação" className="form  mx-3">
@@ -49,7 +49,7 @@ const Cabeca:React.FC<IProps> = () => {
         <select name="rotação" id="rotação" className="form-select form-select-md mb-1 my-2" onChange={rotacionar}>
           <option value="- 90°">Rotação - 90°</option>
           <option value="- 45°">Rotação - 45°</option>
-          <option value="Em Repouso">Em Repouso</option>
+          <option selected value="Em Repouso">Em Repouso</option>
           <option value="45°">Rotação 45°</option>
           <option value="90°">Rotação 90°</option>
         </select>
@@ -60,7 +60,7 @@ const Cabeca:React.FC<IProps> = () => {
 
         <select name="inclinação" id="inclinação" className="form-select form-select-md mb-1 my-2" onChange={inclinar}>
         <option value="Para Cima">Para Cima</option>
-        <option value="Em Repouso">Em Repouso</option>
+        <option selected value="Em Repouso">Em Repouso</option>
         <option value="Para Baixo">Para Baixo</option>
         </select>
       </label>
