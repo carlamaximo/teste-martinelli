@@ -3,6 +3,7 @@ import BracoEsquerdo from './components/BracoEsquerdo';
 import BracoDireito from './components/BraçoDireito';
 import Cabeca from './components/Cabeca';
 import EstadoAtual from './components/EstadoAtual';
+// import CarouselComponent from './components/CarouselComponent';
 import './style/app.css'
 
 const App:React.FC = () => {
@@ -13,7 +14,8 @@ const App:React.FC = () => {
       <BracoEsquerdo />
       <BracoDireito />
     </div>
-    <EstadoAtual />
+      <EstadoAtual />
+      {/* <CarouselComponent arrayProps={['Pra Baixo', 'Pra Cima', 'Em Repouso']}/> */}
     </div>
   );
 }

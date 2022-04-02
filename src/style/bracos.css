@@ -2,6 +2,7 @@
   border: 1px solid gray;
   padding-bottom: 3%;
   width: 100%;
+  height: 200px;
 }
 
 .h3-braco {
@@ -14,4 +15,9 @@
 .div-app-bracos {
   border: 1px solid gray;
   width: 100%;
+}
+
+.labelCotovelo {
+  /* border: 1px solid gray; */
+  width: 35%;
 }

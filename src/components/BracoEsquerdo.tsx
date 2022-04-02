@@ -1,33 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { cotoveloEsquerdoAction, pulsoEsquerdoAction } from '../actions/bracoEsquerdo';
+import CarouselComponent from './CarouselComponent';
 import '../style/bracos.css';
 
 const BracoEsquerdo:React.FC = () => {
   const dispatch = useDispatch();
 
-  const [emRepouso, setEmRepouso] = useState('Em Repouso');
-
   const selector = useSelector((state:any) => state.cotoveloEsquerdoReducer.cotoveloEsquerdo === 'Fortemente Contraído');
 
-  function pulsoValidation(value:string) {
-    console.log('oi', selector);
-  }
 
-  function moverCotovelo({ target: { value } }:string|any) {
-    // pulsoValidation(value);
-    console.log(value)
+  function moverCotovelo(value:string|any) {
     dispatch(cotoveloEsquerdoAction(value));
   }
 
-  function moverPulso({ target: { value } }:string|any) {
-    pulsoValidation(value);
+  function moverPulso(value:any){
     if (selector === false) {
-      setEmRepouso('Em Repouso');
       (alert('O Pulso só pode ser movimentado caso o Cotovelo esteja Fortemente Contraído.'));
       return;
     }
-    
     dispatch(pulsoEsquerdoAction(value));
   }
 
@@ -37,28 +28,31 @@ const BracoEsquerdo:React.FC = () => {
 
       <form action="" className="d-flex justify-content-center mx-3">
 
-        <label htmlFor="cotovelo" className="form  mx-3">
+        <label htmlFor="cotovelo" className="form  mx-3 labelCotovelo">
           <h4 className="d-flex justify-content-center my-1">Cotovelo</h4>
 
-          <select className="form-select form-select-md mb-1 my-2" onChange={moverCotovelo}>
-            <option selected value="Em Repouso">{emRepouso}</option>
+          <CarouselComponent arrayProps={['Em Repouso', 'Levemente Contraído', 'Contraído', 'Fortemente Contraído']} functionProps={moverCotovelo} />
+
+          {/* <select className="form-select form-select-md mb-1 my-2" onChange={moverCotovelo}>
+            <option selected value="Em Repouso">Em Repouso</option>
             <option value="Levemente Contraído">Levemente Contraído</option>
             <option value="Contraído">Contraído</option>
             <option value="Fortemente Contraído">Fortemente Contraído</option> 
-          </select>
+          </select> */}
         </label>
 
-      <label htmlFor="" className="form  mx-3">
+      <label htmlFor="" className="form  mx-3 labelCotovelo">
         <h4 className="d-flex justify-content-center my-1">Pulso</h4>
 
-        <select className="form-select form-select-md mb-1 my-2" onChange={moverPulso}>
-          <option value="Rotação - 45°">Rotação - 45°</option>
+        <CarouselComponent arrayProps={['Rotação - 45', 'Em Repouso', 'Rotação 45°', 'Rotação 90°', 'Rotação 135°', 'Rotação 180°']} functionProps={moverPulso} />
+        {/* <select className="form-select form-select-md mb-1 my-2" onChange={pulsoValidation}>
+          <option value="-45°">{estado === 'Em Repouso' ? 'Rotação - 45°' : `Rotação ${estado}`}</option>
           <option selected value="Em Repouso">Em Repouso</option>
-          <option value="Rotação 45°">Rotação 45°</option>
-          <option value="Rotação 90°">Rotação 90°</option>
-          <option value="Rotação 135°">Rotação 135°</option>
-          <option value="Rotação 180°">Rotação 180°</option>
-        </select>
+          <option value="45°">{estado === 'Em Repouso' ? 'Rotação 45°' : `Rotação ${estado}`}</option>
+          <option value="90°">{estado === 'Em Repouso' ? 'Rotação 90°' : `Rotação ${estado}`}</option>
+          <option value="135°">{estado === 'Em Repouso' ? 'Rotação 135°' : `Rotação ${estado}`}</option>
+          <option value="180°">{estado === 'Em Repouso' ? 'Rotação 180°' : `Rotação ${estado}`}</option>
+        </select> */}
       </label>
 
         </form>

@@ -9,3 +9,8 @@
   background-color: aliceblue;
   border-radius: 5px;
 }
+
+.labelInclinacao {
+  /* border: 1px solid gray; */
+  width: 15%;
+}
