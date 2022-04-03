@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-// import { connect } from 'react-redux';
 import Carousel from 'react-bootstrap/Carousel';
 import { useReadyStateEffect } from 'react-ready-state-effect';
+import { IPropsComponent } from '../interface/PropsComponent';
 import '../style/carousel.css';
 
-const CarouselComponent:React.FC<any> = ({arrayProps, functionProps}:any) => {
+const CarouselComponent:React.FC<IPropsComponent> = ({arrayProps, functionProps}:IPropsComponent) => {
 
   function ControlledCarousel() {
     const [index, setIndex] = useState(0);
@@ -37,8 +37,10 @@ const CarouselComponent:React.FC<any> = ({arrayProps, functionProps}:any) => {
         indicators={false}
       >
         {arrayProps.map((item:string, e:any) => 
-        <Carousel.Item key={e}>
-          <p className="text-dark pl-3 item-carousel">{pagina ? arrayProps.find((e:string) => e === 'Em Repouso') : item}</p>
+        <Carousel.Item key={e} data-testid="carousel-cabeca">
+          <p className="text-dark pl-3 item-carousel" data-testid={item}>
+            {pagina ? arrayProps.find((e:string) => e === 'Em Repouso') : item}
+          </p>
         </Carousel.Item>)}
       </Carousel>
     );

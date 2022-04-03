@@ -3,8 +3,8 @@ import BracoEsquerdo from './components/BracoEsquerdo';
 import BracoDireito from './components/BracoDireito';
 import Cabeca from './components/Cabeca';
 import EstadoAtual from './components/EstadoAtual';
-// import CarouselComponent from './components/CarouselComponent';
 import './style/app.css'
+// import AlertDismissibleExample from './components/AlertDismissibleExample';
 
 const App:React.FC = () => {
   return (
@@ -15,7 +15,7 @@ const App:React.FC = () => {
       <BracoDireito />
     </div>
       <EstadoAtual />
-      {/* <CarouselComponent arrayProps={['Pra Baixo', 'Pra Cima', 'Em Repouso']}/> */}
+      {/* <AlertDismissibleExample /> */}
     </div>
   );
 }

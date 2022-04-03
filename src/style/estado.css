@@ -4,6 +4,7 @@
   border: 1px solid gray;
   padding-bottom: 3%;
   width: 100%;
+  /* color: aliceblue; */
 }
 
 .h3-estado {
@@ -11,6 +12,7 @@
   border: 1px solid gray;
   background-color: aliceblue;
   border-radius: 5px;
+  /* color: black; */
 }
 
 .div-estado-item {
@@ -20,4 +22,19 @@
   margin-top: -0.9%;
   margin-bottom: -3%;
   /* color: wheat; */
+}
+
+@media screen and (max-width: 800px) {
+  .h3-estado {
+    font-size: 20px;
+  }
+
+  .estado-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* .div-estado-item {
+    margin-top: -1.3%;
+  } */
 }

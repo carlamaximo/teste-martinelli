@@ -1,13 +1,15 @@
 .carousel {
   width: auto;
-  /* border: 1px solid gray;
-  border-radius: 10px; */
 }
 
 .item-carousel {
-  margin: 5%;
+  margin: 8%;
   /* border: 1px solid gray; */
   width: auto;
   padding: 10%;
   text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+
 }
