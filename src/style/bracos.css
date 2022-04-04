@@ -1,0 +1,29 @@
+.div-principal-bracos {
+  border: 1px solid gray;
+  padding-bottom: 3%;
+  width: 100%;
+  height: 238px;
+  overflow: auto;
+}
+
+.h3-braco {
+  width: 100%;
+  border: 1px solid gray;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+.div-app-bracos {
+  border: 1px solid gray;
+  width: 100%;
+}
+
+.labelCotovelo {
+  width: 35%;
+}
+
+@media screen and (max-width: 800px) {
+  .h3-braco {
+    font-size: 20px;
+  }
+}

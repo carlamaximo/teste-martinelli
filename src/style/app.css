@@ -1,0 +1,18 @@
+.div-principal {
+  font-family: 'Bebas Neue', cursive;
+  background: linear-gradient(to top, #8e9eab, #eef2f3);
+  background-size: 100%;
+  border: 1px solid gray;
+  width: 80%;
+}
+
+.login {
+  text-decoration: none;
+} 
+
+@media screen and (max-width: 800px) {
+  .div-app-bracos {
+    display: flex;
+    flex-direction: column;
+  }
+}

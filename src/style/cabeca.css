@@ -1,0 +1,28 @@
+.div-principal-cabeca {
+  border: 1px solid gray;
+  padding-bottom: 3%
+}
+
+.h3-cabeca {
+  border: 1px solid gray;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+.labelInclinacao {
+  width: 15%;
+}
+
+@media screen and (max-width: 800px) {
+  .h3-cabeca {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: medium;
+  }
+
+  .labelInclinacao {
+    width: 38%;
+  }
+}
