@@ -1,6 +1,6 @@
 import React from 'react';
 import CarouselComponent from './CarouselComponent';
-import AlertDismissibleExample from './AlertDismissibleExample';
+import AlertDismissibleExample from './AlertComponent';
 import '../style/bracos.css';
 
 const Braco:React.FC<any> = ({titulo, acaoCotovelo, acaoPulso, acaoAlert, mensagem}:any) => {
@@ -16,14 +16,19 @@ const Braco:React.FC<any> = ({titulo, acaoCotovelo, acaoPulso, acaoAlert, mensag
 
         <label htmlFor="cotovelo" className="form  mx-3 labelCotovelo">
           <h4 className="d-flex justify-content-center my-1">Cotovelo</h4>
-
-          <CarouselComponent arrayProps={['Em Repouso', 'Levemente Contraído', 'Contraído', 'Fortemente Contraído']} functionProps={acaoCotovelo} />
+          <CarouselComponent
+            arrayProps={['Em Repouso', 'Levemente Contraído', 'Contraído', 'Fortemente Contraído']}
+            functionProps={acaoCotovelo}
+          />
         </label>
 
       <label htmlFor="" className="form  mx-3 labelCotovelo">
         <h4 className="d-flex justify-content-center my-1">Pulso</h4>
 
-        <CarouselComponent arrayProps={['Rotação - 45', 'Em Repouso', 'Rotação 45°', 'Rotação 90°', 'Rotação 135°', 'Rotação 180°']} functionProps={acaoPulso} />
+        <CarouselComponent
+          arrayProps={['Rotação - 45', 'Em Repouso', 'Rotação 45°', 'Rotação 90°', 'Rotação 135°', 'Rotação 180°']}
+          functionProps={acaoPulso}
+        />
       </label>
 
       </form>

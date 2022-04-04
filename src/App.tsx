@@ -4,7 +4,6 @@ import BracoDireito from './components/BracoDireito';
 import Cabeca from './components/Cabeca';
 import EstadoAtual from './components/EstadoAtual';
 import './style/app.css'
-// import AlertDismissibleExample from './components/AlertDismissibleExample';
 
 const App:React.FC = () => {
   return (
@@ -15,7 +14,6 @@ const App:React.FC = () => {
       <BracoDireito />
     </div>
       <EstadoAtual />
-      {/* <AlertDismissibleExample /> */}
     </div>
   );
 }

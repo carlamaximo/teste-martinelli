@@ -13,12 +13,13 @@ const CarouselComponent:React.FC<IPropsComponent> = ({arrayProps, functionProps}
   
     const handleSelect = (selectedIndex:number, e:any) => {
       setIndex(selectedIndex);
-      setPagina(false);
+      // setPagina(false);
       const result = arrayProps.findIndex((e:string) => e === 'Em Repouso');
-      console.log(result);
-      console.log(arrayProps[result]);
-      setEmRePouso(arrayProps[result]);
-      functionProps(arrayProps[selectedIndex]);
+      // console.log(result);
+      // console.log(arrayProps[result]);
+      // setEmRePouso(arrayProps[result]);
+      // arrayProps[selectedIndex] !== 'Em Repouso' ? setIndex(selectedIndex) : (setIndex(0));
+      functionProps(arrayProps[selectedIndex])
     };
 
     useReadyStateEffect(() => {
@@ -39,7 +40,8 @@ const CarouselComponent:React.FC<IPropsComponent> = ({arrayProps, functionProps}
         {arrayProps.map((item:string, e:any) => 
         <Carousel.Item key={e} data-testid="carousel-cabeca">
           <p className="text-dark pl-3 item-carousel" data-testid={item}>
-            {pagina ? arrayProps.find((e:string) => e === 'Em Repouso') : item}
+            {item}
+            {/* {pagina ? arrayProps.find((e:string) => e === 'Em Repouso') : item} */}
           </p>
         </Carousel.Item>)}
       </Carousel>

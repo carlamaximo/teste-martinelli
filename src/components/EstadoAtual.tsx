@@ -2,7 +2,7 @@ import React from 'react';
 import { IPropsState } from '../interface/PropsState';
 import { connect } from 'react-redux';
 import type { RootState } from '../store';
-import '../style/estado.css'
+import '../style/estado.css';
 
 const EstadoAtual:React.FC<IPropsState> = ({
   rotation, inclination, cotoveloEsquerdo, pulsoEsquerdo, cotoveloDireito, pulsoDireito 

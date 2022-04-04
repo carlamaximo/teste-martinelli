@@ -22,6 +22,7 @@ const BracoEsquerdo:React.FC = () => {
       setAlertComonent(true);
       return;
     }
+    
     setAlertComonent(false);
     dispatch(pulsoEsquerdoAction(value));
   }

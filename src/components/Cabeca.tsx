@@ -5,7 +5,7 @@ import { rotationHeadAction, inclinationHeadAction } from '../actions/cabeca';
 import type { AppDispatch } from '../store';
 import type { RootState } from '../reducers';
 import CarouselComponent from './CarouselComponent';
-import AlertDismissibleExample from './AlertDismissibleExample';
+import AlertComponent from './AlertComponent';
 
 const Cabeca:React.FC = () => {
   const [alertComponent, setAlertComonent] = useState(false);
@@ -34,7 +34,7 @@ const Cabeca:React.FC = () => {
     <h3 className="d-flex justify-content-center h3-cabeca p-1" data-testid="cabeca">Cabeça</h3>
       {
         alertComponent &&
-        <AlertDismissibleExample
+        <AlertComponent
         mensagem={'A Cabeça só pode ser rotacionada caso sua Inclinação não esteja Para Baixo.'}/>
       }
      <form action="" className="d-flex justify-content-center">

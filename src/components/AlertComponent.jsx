@@ -1,7 +1,7 @@
 import Alert from 'react-bootstrap/Alert';
 import React, { useState } from 'react';
 
-export default function AlertDismissibleExample({mensagem}) {
+export default function AlertComponent({mensagem}) {
   const [show, setShow] = useState(true);
 
   if (show) {
