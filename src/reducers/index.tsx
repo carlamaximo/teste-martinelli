@@ -4,7 +4,15 @@ import { cotoveloEsquerdoReducer, pulsoEsquerdoReducer } from './bracoEsquerdoRe
 import { cotoveloDireitoReducer, pulsoDireitoReducer } from './bracoDireitoReducer';
 import { usuarioReducer } from './usuarioReducer';
 
-const rootReducer = combineReducers({ rotationHeadReducer, inclinationHeadReducer, cotoveloEsquerdoReducer, pulsoEsquerdoReducer, cotoveloDireitoReducer, pulsoDireitoReducer, usuarioReducer });
+const rootReducer = combineReducers({
+  rotationHeadReducer,
+  inclinationHeadReducer,
+  cotoveloEsquerdoReducer,
+  pulsoEsquerdoReducer,
+  cotoveloDireitoReducer,
+  pulsoDireitoReducer,
+  usuarioReducer 
+});
 
 export default rootReducer;
 
