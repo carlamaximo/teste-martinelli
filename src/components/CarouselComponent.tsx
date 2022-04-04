@@ -8,16 +8,19 @@ interface IPropsCarousel extends IPropsComponent {
   titulo: string,
 }
 
-const CarouselComponent:React.FC<IPropsCarousel> = ({arrayProps, functionProps, titulo}:IPropsCarousel) => {
+const CarouselComponent:React.FC<IPropsCarousel> = ({ arrayProps, functionProps, titulo }:IPropsCarousel) => {
 
   function ControlledCarousel() {
     const [index, setIndex] = useState(0);
     const [pagina, setPagina] = useState(true);
-    const [emRepouso, setEmRePouso] = useState('Em Repouso');
+
+    function verificarIndexEmRepouso():number {
+      return arrayProps.findIndex((e) => e === 'Em Repouso');
+    }
   
     const handleSelect = (selectedIndex:number, e:any) => {
+      setPagina(false);
       setIndex(selectedIndex);
-      // const result = arrayProps.findIndex((e:string) => e === 'Em Repouso');
 
       if (titulo === 'Inclinação') {
         localStorage.setItem('Estado Cabeça', arrayProps[selectedIndex]);
@@ -40,19 +43,18 @@ const CarouselComponent:React.FC<IPropsCarousel> = ({arrayProps, functionProps, 
 
     return (
       <Carousel
-        activeIndex={index}
-        onSelect={handleSelect}
-        interval={null}
+        activeIndex={ pagina ? verificarIndexEmRepouso() : index }
+        onSelect={ handleSelect }
+        interval={ null }
         className="carousel"
         variant={'dark'}
-        nextLabel={null}
-        indicators={false}
+        nextLabel={ null }
+        indicators={ false }
       >
         {arrayProps.map((item:string, e:any) => 
         <Carousel.Item key={e} data-testid="carousel-cabeca">
           <p className="text-dark pl-3 item-carousel" data-testid={ item }>
             { item }
-            {/* { pagina ? arrayProps.find((e:string) => e === 'Em Repouso') : item } */}
           </p>
         </Carousel.Item>)}
       </Carousel>

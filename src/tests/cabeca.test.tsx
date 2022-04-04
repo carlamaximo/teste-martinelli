@@ -42,7 +42,7 @@ describe('Testa o componente "Cabeça"', () => {
         <EstadoAtual />
       </Provider>);
     const carousel = screen.getAllByText<HTMLElement>(/Em Repouso/i);
-    expect(carousel.length).toBe(17);
+    expect(carousel.length).toBe(10);
 
     const setas = screen.getAllByRole<HTMLElement>('button');
     const setaDireita = setas[1];
@@ -59,6 +59,6 @@ describe('Testa o componente "Cabeça"', () => {
       </Provider>);
 
     const carousel = screen.getAllByText<HTMLElement>(/Em Repouso/i);
-    expect(carousel.length).toBe(16);
+    expect(carousel.length).toBe(9);
   });
 });

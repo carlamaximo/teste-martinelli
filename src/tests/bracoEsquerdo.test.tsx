@@ -7,7 +7,7 @@ import store from '../store';
 
 describe('Testa o componente "Braço Esquerdo"', () => {
 
-  test('Testa o Título "Cabeça"', () => {
+  test('Testa o Título "Braço Esquerdo"', () => {
     render(
       <Provider store={ store }>
         <BracoEsquerdo />
