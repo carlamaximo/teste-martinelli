@@ -29,7 +29,7 @@
     <h2>Para rodar o projeto localmente:</h2>
       <ol>
       <li>Clone o reposítório: "git clone git@github.com:carlamaximo/teste-martinelli.git"</li>
-      <li>Entre na pasta do repositório: "cd app-name"</li>
+      <li>Entre na pasta do repositório: "cd teste-martinelli"</li>
       <li>Instale as dependências com o comando "npm install"</li>
       <li>Inicialize o projeto com o comando "npm start"</li>
     </ol>
