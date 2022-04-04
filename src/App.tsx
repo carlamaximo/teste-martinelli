@@ -1,20 +1,17 @@
 import React from 'react';
-import BracoEsquerdo from './components/BracoEsquerdo';
-import BracoDireito from './components/BracoDireito';
-import Cabeca from './components/Cabeca';
-import EstadoAtual from './components/EstadoAtual';
+import Login from './pages/Login';
+import Controle from './pages/Controle';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './style/app.css'
 
 const App:React.FC = () => {
   return (
-    <div className="div-principal d-flex flex-column mx-auto my-auto">
-     <Cabeca />
-    <div className="d-flex flex-direction-row mx-center div-app-bracos justify-content-center">
-      <BracoEsquerdo />
-      <BracoDireito />
-    </div>
-      <EstadoAtual />
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={ <Login /> } />
+      <Route path="/home" element={ <Controle /> } />
+     </Routes>
+   </BrowserRouter>
   );
 }
 

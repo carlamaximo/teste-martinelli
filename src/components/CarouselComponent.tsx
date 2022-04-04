@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { useReadyStateEffect } from 'react-ready-state-effect';
 import { IPropsComponent } from '../interface/PropsComponent';
@@ -8,7 +8,11 @@ interface IPropsCarousel extends IPropsComponent {
   titulo: string,
 }
 
-const CarouselComponent:React.FC<IPropsCarousel> = ({ arrayProps, functionProps, titulo }:IPropsCarousel) => {
+const CarouselComponent:React.FC<IPropsCarousel> = ({
+  arrayProps,
+  functionProps,
+  titulo
+  }:IPropsCarousel) => {
 
   function ControlledCarousel() {
     const [index, setIndex] = useState(0);
@@ -17,7 +21,7 @@ const CarouselComponent:React.FC<IPropsCarousel> = ({ arrayProps, functionProps,
     function verificarIndexEmRepouso():number {
       return arrayProps.findIndex((e) => e === 'Em Repouso');
     }
-  
+
     const handleSelect = (selectedIndex:number, e:any) => {
       setPagina(false);
       setIndex(selectedIndex);
@@ -33,11 +37,12 @@ const CarouselComponent:React.FC<IPropsCarousel> = ({ arrayProps, functionProps,
       if(titulo === 'Braço Direito') {
         localStorage.setItem('Estado Direito', arrayProps[selectedIndex]);
       }
+
       functionProps(arrayProps[selectedIndex])
     };
-
+    
     useReadyStateEffect(() => {
-        console.log(`Document loading completed.`);
+      console.log(`Document loading completed.`);
       }, [], "complete"
     );
 

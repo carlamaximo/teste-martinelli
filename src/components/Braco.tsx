@@ -4,7 +4,13 @@ import AlertComponent from './AlertComponent';
 import { IPropsBraco } from '../interface/PropsBraco';
 import '../style/bracos.css';
 
-const Braco:React.FC<IPropsBraco> = ({ titulo, acaoCotovelo, acaoPulso, acaoAlert, mensagem }:IPropsBraco) => {
+const Braco:React.FC<IPropsBraco> = ({
+  titulo,
+  acaoCotovelo,
+  acaoPulso,
+  acaoAlert,
+  mensagem 
+  }:IPropsBraco) => {
   return (
     <div className="div-principal-bracos">
       <h3 className="d-flex justify-content-center p-1 h3-braco">{ titulo }</h3>
