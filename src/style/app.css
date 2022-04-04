@@ -6,6 +6,10 @@
   width: 80%;
 }
 
+.login {
+  text-decoration: none;
+} 
+
 @media screen and (max-width: 800px) {
   .div-app-bracos {
     display: flex;

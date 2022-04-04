@@ -7,6 +7,7 @@ import '../style/app.css'
 import Cabecalho from '../components/Cabecalho';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { BiErrorCircle } from 'react-icons/bi';
 
 const Controle:React.FC = ({usuarioLogado}:any) => {
   return (
@@ -22,10 +23,12 @@ const Controle:React.FC = ({usuarioLogado}:any) => {
             <EstadoAtual />
         </div>
       ) : (
-        <div
-          className="mx-auto my-5 py-5">
-          Ops! Não encontramos nenhum usuário. Por favor, faça seu login novamente clicando em: 
-          <Link to="/"> Login </Link>
+        <div className="mx-auto my-5 py-5 d-flex align-items-center div-principal">
+          <BiErrorCircle size={50} className="mx-4"/>
+          <h4>
+            Ops! Não encontramos nenhum usuário. Por favor, faça seu login novamente clicando em: 
+            <Link to="/" className="login"> Login </Link>
+          </h4>
         </div>
         )}
     </div>
