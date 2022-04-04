@@ -24,15 +24,15 @@ const EstadoAtual:React.FC<IPropsState> = ({
 
       <div className="d-flex justify-content-center estado-item">
         <div className="div-estado-item">
-          <h4 className="d-flex mx-5 py-2 justify-content-center">Cabeça: </h4>
-          <p className="d-flex justify-content-center" data-testid="estado-rotacao-cabeca">Rotação: { rotation }</p>
-          <p className="d-flex justify-content-center">Inclinação: { inclination }</p>
-        </div>
-
-        <div className="div-estado-item">
           <h4 className="d-flex mx-5 py-2 justify-content-center">Braço Esquerdo: </h4>
           <p className="d-flex justify-content-center">{validarCotovelo(cotoveloEsquerdo)}</p>
           <p className="d-flex justify-content-center">{validarPulso(pulsoEsquerdo)}</p>
+        </div>
+
+        <div className="div-estado-item">
+          <h4 className="d-flex mx-5 py-2 justify-content-center">Cabeça: </h4>
+          <p className="d-flex justify-content-center" data-testid="estado-rotacao-cabeca">Rotação: { rotation }</p>
+          <p className="d-flex justify-content-center">Inclinação: { inclination }</p>
         </div>
 
         <div className="div-estado-item">
