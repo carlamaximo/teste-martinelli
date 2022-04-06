@@ -15,7 +15,6 @@
     <p>Feito em abril de 2022.</p>
     <h2>Stacks utilizadas</h2>
     <ul>
-      <li>JavaScript</li>
       <li>Typescript</li>
       <li>CSS</li>
       <li>HTML5</li>
