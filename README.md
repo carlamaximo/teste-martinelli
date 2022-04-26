@@ -8,14 +8,13 @@
 </head>
 <body>
   <header>
-    <h1 id="title">Projeto Seleção Martinelli Auditores</h1>
+    <h1 id="title">Projeto Seleção Para uma vaga DEV Pleno</h1>
   </header>
   <main>
-    <p>Projeto pessoal para processo seletivo da empresa Martinelli Auditores.</p>
+    <p>Projeto pessoal para um processo seletivo.</p>
     <p>Feito em abril de 2022.</p>
     <h2>Stacks utilizadas</h2>
     <ul>
-      <li>JavaScript</li>
       <li>Typescript</li>
       <li>CSS</li>
       <li>HTML5</li>
@@ -29,7 +28,7 @@
     <h2>Para rodar o projeto localmente:</h2>
       <ol>
       <li>Clone o reposítório: "git clone git@github.com:carlamaximo/teste-martinelli.git"</li>
-      <li>Entre na pasta do repositório: "cd app-name"</li>
+      <li>Entre na pasta do repositório: "cd teste-martinelli"</li>
       <li>Instale as dependências com o comando "npm install"</li>
       <li>Inicialize o projeto com o comando "npm start"</li>
     </ol>
