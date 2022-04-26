@@ -8,10 +8,10 @@
 </head>
 <body>
   <header>
-    <h1 id="title">Projeto Seleção Martinelli Auditores</h1>
+    <h1 id="title">Projeto Seleção Para uma vaga DEV Pleno</h1>
   </header>
   <main>
-    <p>Projeto pessoal para processo seletivo da empresa Martinelli Auditores.</p>
+    <p>Projeto pessoal para um processo seletivo.</p>
     <p>Feito em abril de 2022.</p>
     <h2>Stacks utilizadas</h2>
     <ul>
