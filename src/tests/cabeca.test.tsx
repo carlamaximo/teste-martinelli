@@ -4,7 +4,7 @@ import { render, screen } from  '@testing-library/react';
 import Cabeca from '../components/Cabeca';
 import EstadoAtual from '../components/EstadoAtual';
 import { Provider } from 'react-redux';
-import store from '../store';
+import { store } from '../store';
 
 describe('Testa o componente "Cabeça"', () => {
 

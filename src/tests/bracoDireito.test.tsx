@@ -3,7 +3,7 @@ import '@testing-library/jest-dom/extend-expect';
 import { render, screen } from  '@testing-library/react';
 import BracoDireito from '../components/BracoDireito';
 import { Provider } from 'react-redux';
-import store from '../store';
+import {store} from '../store';
 
 describe('Testa o componente "Braço Direito"', () => {
 

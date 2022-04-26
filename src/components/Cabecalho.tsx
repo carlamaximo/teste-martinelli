@@ -17,7 +17,7 @@ const Cabecalho:React.FC = ({ usuarioLogado, username }:any) => {
             <a className="nav-link" href="/"><SiProbot size={20} className="mx-auto"/></a>
           </li>
           <li className="nav-item">
-            <a className="nav-link " aria-current="page" href="#">Controle Robô Martinelli</a>
+            <a className="nav-link " aria-current="page" href="#">Controle Robô Inteligente</a>
           </li>
           <li className="nav-item">
             <a className="nav-link disabled" href="#" aria-disabled="true">Quem está controlando o robô:  { username }</a>

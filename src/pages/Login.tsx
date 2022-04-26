@@ -19,7 +19,7 @@ const Login:React.FC = () => {
 
   return (
     <div className="div-principal-login d-flex flex-column mx-auto my-auto">
-      <h1 className="mx-auto my-5 h1-login">Bem vindo(a) ao controle do Robô Martinelli!</h1>
+      <h1 className="mx-auto my-5 h1-login">Bem vindo(a) ao controle do Robô Inteligente!</h1>
       <h2 className="mx-auto my-5 h2-login">Faça seu login para entrar na aplicação:</h2>
       <SiProbot size={100} className="mx-auto  my-5"/>
 
