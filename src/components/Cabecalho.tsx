@@ -46,4 +46,4 @@ const mapStateToProps = (state:any) => ({
   username: state.usuarioReducer.username,
 });
 
-export default connect(mapStateToProps)(Cabecalho);
+export default connect(mapStateToProps, null)(Cabecalho);
